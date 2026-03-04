@@ -1,4 +1,4 @@
-f = open("C://users/kirby/Downloads/rosalind_GC.txt","r")  
+f = open("C://users/YOURUSERNAMEHERE/FILEPATH/DNAseq.txt","r")  
 lista = ''.join([x.strip('\r\n') for x in f.readlines()]).split('>Rosalind_')
 f.close()
 dictio = {}
@@ -14,3 +14,4 @@ for char in lista:
     dictio[char[:4]]=(100.000*cntcg)/cnt
 maxi = max(dictio, key=dictio.get)
 print ('>Rosalind_'+str(maxi)+'\n'+("{0:.6f}".format(round(dictio[maxi],6))))
+
